@@ -28,6 +28,8 @@ map <Leader>nt :NERDTree<CR>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 map <Leader>f :FZF ~<CR>
+map <Leader>co :CondaChangeEnv<CR>
+
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)

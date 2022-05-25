@@ -10,6 +10,9 @@ Plug 'gryf/pylint-vim'
 "scripting
 Plug 'ironcamel/vim-script-runner'
 
+"Conda
+Plug 'cjrh/vim-conda'
+
 " status bar
 Plug 'maximbaz/lightline-ale'
 Plug 'itchyny/lightline.vim'
