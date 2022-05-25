@@ -4,6 +4,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'mattn/emmet-vim'
+Plug 'gryf/pylint-vim'
+
+"scripting
+Plug 'ironcamel/vim-script-runner'
 
 " status bar
 Plug 'maximbaz/lightline-ale'
