@@ -1,30 +1,20 @@
 " HTML, JSX
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.ts,*.tsx'
-" Lightlane
-let g:lightline = {
-      \ 'active': {
-      \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
-      \   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
-      \ },
-      \ 'inactive': {
-      \   'left': [['inactive'], ['relativepath']],
-      \   'right': [['bufnum']]
-      \ },
-      \ 'component': {
-      \   'bufnum': '%n',
-      \   'inactive': 'inactive'
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'fugitive#head',
-      \   'kitestatus': 'kite#statusline'
-      \ },
-      \ 'colorscheme': 'gruvbox',
-      \ 'subseparator': {
-      \   'left': '',
-      \   'right': ''
-      \ }
-      \}
+" airline
+let g:airline#extensions#tabline#enabled=1
+let g:airline_powerline_fonts=1
 
+"YouCompleteMe
+function! BuildYCM(info)
+	"- name: name of the plugin
+	"- status: 'installed', 'update', or 'unchanged'
+	"- force: set on PlugInstall! or PlugUpdate!
+	if a:info.status == 'instaled' || a:info.force
+		!./install.py
+	endif
+endfunction
+
+let g:go_template_autocreate = 1
 "  nerdtree
 let NERDTreeShowHidden=1
 let NERDTreeQuitOnOpen=1
@@ -35,7 +25,7 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeMapOpenInTab='\t'
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsSnippetDirectories=[$HOME.'/configs/.vim/UltiSnips']
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.config/nvim/vim-plug/UltiSnips']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<C-_>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -93,7 +83,7 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 "let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 "function! FloatingFZF()
   "let buf = nvim_create_buf(v:false, v:true)
-  "call setbufvar(buf, '&signcolumn', 'no')
+"call setbufvar(buf, '&signcolumn', 'no')
   "let height = float2nr((&lines - 3) / 2)
   "let width = float2nr(&columns - (&columns * 2 / 10))
   "let col = float2nr((&columns - width) / 2)

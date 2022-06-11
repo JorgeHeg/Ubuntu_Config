@@ -2,6 +2,15 @@ source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/vim-plug/plugin-config.vim
 source $HOME/.config/nvim/vim-plug/maps.vim
 
+"Configuración de conda 
+"Paginas consultadas: 
+"https://www.hassanaskary.com/vim/conda/python/2020/04/27/how-to-setup-neovim-with-python-provider-using-conda.html
+"https://github.com/cjrh/vim-conda
+let g:python3_host_prog='/home/jorge/anaconda3/envs/pynvim/bin/python'
+let g:conda_startup_msg_suppress = 0
+let g:conda_startup_wrn_suppress = 1
+
+	"Configuracion de teclas
 let g:ackprg = 'ag --nogroup --nocolor --column'
 " - down / up / left / right
 let g:fzf_layout = { 'down': '50%' }
@@ -22,13 +31,12 @@ set sw=2
 "IdentLine
 set list lcs=tab:\|\ "Algo  
 
-colorscheme gruvbox
-let g:gruvbox_contrast_dark = "hard"
+colorscheme onedark
 highlight Normal ctermbg=NONE
 set laststatus=2
 set noshowmode
 
-au BufNewFile,BufRead *.html set filetype=htmldjango
+au BufNewFile,BufRead *.html set filetype=html
 lua require'colorizer'.setup()
 
 " Start NERDTree and put the cursor back in the other window.
@@ -47,6 +55,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"live-server
+let g:bracey_browser_command = 'firefox'
+let g:bracey_auto_start_browser = 0
+let g:bracey_refresh_on_save = 1
+
 
 "" Searching
 set hlsearch                    " highlight matches

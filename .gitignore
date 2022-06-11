@@ -2,6 +2,7 @@ coc
 Code
 dconf
 eog
+EasyEDA
 evolution
 user-dirs.locale
 gnome-control-center
@@ -26,3 +27,7 @@ user-dirs.dirs
 VirtualBox
 yelp
 .gsd-keyboard.settings-ported
+Raspberry Pi
+enchant
+gedit
+simple-scan

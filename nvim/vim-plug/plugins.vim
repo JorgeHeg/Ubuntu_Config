@@ -4,18 +4,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'norcalli/nvim-colorizer.lua'
+Plug 'joshdick/onedark.vim'
 Plug 'mattn/emmet-vim'
 Plug 'gryf/pylint-vim'
+Plug 'othree/html5.vim'
+Plug 'Valloric/YouCompleteMe'
 
 "scripting
 Plug 'ironcamel/vim-script-runner'
+
+"Live Server
+Plug 'turbio/bracey.vim'
 
 "Conda
 Plug 'cjrh/vim-conda'
 
 " status bar
-Plug 'maximbaz/lightline-ale'
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Themes
 Plug 'morhetz/gruvbox'
@@ -48,4 +54,7 @@ Plug 'tpope/vim-repeat'
 
 Plug 'christoomey/vim-tmux-navigator'
 
+"GO
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'neovim/nvim-lspconfig'
 call plug#end()
